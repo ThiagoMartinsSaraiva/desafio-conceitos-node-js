@@ -72,6 +72,7 @@ app.put('/todos/:id', checksExistsUserAccount, (request, response) => {
   const { user } = request
   const { id } = request.params
   const { title, deadline } = request.body
+  
 
   const todoIndex = user.todos.findIndex(t => t.id === id)
 
